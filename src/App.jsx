@@ -9,17 +9,21 @@ import {
   ArrowRight,
   Settings,
   ChevronDown,
+  HomeIcon,
+  CompassIcon,
+  LayersIcon,
+  BookmarkIcon,
 } from "lucide-react";
 
 const Index = () => {
   const [searchText, setSearchText] = useState("");
 
   return (
-    <div className="min-h-screen flex bg-[#111111]">
+    <div className="flex h-screen">
       {/* Sidebar */}
-      <aside className="w-64 hidden md:flex flex-col border-r border-white/10 bg-[#111111]">
+      <div className="hidden md:flex flex-col w-64 bg-black border-r border-white/10">
         <div className="p-4 space-y-4">
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 text-white">
             <svg
               width="32"
               height="32"
@@ -51,7 +55,7 @@ const Index = () => {
             </svg>
             <span className="text-xl font-semibold">perplexity</span>
           </div>
-          <button className="w-full px-4 py-2 flex items-center justify-between rounded-lg bg-white/5 hover:bg-white/10 transition-colors">
+          <button className="w-full px-4 py-2 flex items-center justify-between rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-white">
             <span>New Thread</span>
             <span className="text-xs text-gray-400">Ctrl I</span>
           </button>
@@ -90,16 +94,16 @@ const Index = () => {
 
         <div className="p-4 border-t border-white/10">
           <div className="p-4 rounded-lg bg-white/5">
-            <h3 className="font-semibold mb-2">Try Pro</h3>
+            <h3 className="font-semibold mb-2 text-white">Try Pro</h3>
             <p className="text-sm text-gray-400 mb-4">
               Upgrade for image upload, smarter AI, and more Pro Search.
             </p>
-            <button className="w-full px-4 py-2 text-sm rounded-lg bg-white/10 hover:bg-white/20 transition-colors">
+            <button className="w-full px-4 py-2 text-sm rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-white">
               Learn More
             </button>
           </div>
         </div>
-      </aside>
+      </div>
 
       {/* Main Content */}
       <main className="flex-1 p-4 md:p-8">
@@ -170,6 +174,40 @@ const Index = () => {
           </div>
         </div>
       </main>
+
+      {/* Mobile bottom navigation */}
+      <div className="md:hidden fixed bottom-0 left-0 right-0 bg-black border-t border-white/10">
+        <nav className="flex justify-around items-center h-16">
+          <a
+            href="/"
+            className="flex flex-col items-center text-gray-400 hover:text-white"
+          >
+            <HomeIcon size={24} />
+            <span className="text-xs mt-1">Home</span>
+          </a>
+          <a
+            href="/discover"
+            className="flex flex-col items-center text-gray-400 hover:text-white"
+          >
+            <CompassIcon size={24} />
+            <span className="text-xs mt-1">Discover</span>
+          </a>
+          <a
+            href="/spaces"
+            className="flex flex-col items-center text-gray-400 hover:text-white"
+          >
+            <LayersIcon size={24} />
+            <span className="text-xs mt-1">Spaces</span>
+          </a>
+          <a
+            href="/library"
+            className="flex flex-col items-center text-gray-400 hover:text-white"
+          >
+            <BookmarkIcon size={24} />
+            <span className="text-xs mt-1">Library</span>
+          </a>
+        </nav>
+      </div>
     </div>
   );
 };
