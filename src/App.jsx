@@ -151,7 +151,7 @@ const Index = () => {
                 <Settings className="w-6 h-6" />
               </div>
               <div className="flex flex-col">
-                <span className="text-sm">OpenAI's GPT-5</span>
+                <span className="text-sm">OpenAIs GPT-5</span>
                 <span className="text-sm text-gray-400">Roadmap</span>
               </div>
             </div>
