@@ -22,10 +22,7 @@ export default {
         primary: "#2D2D2D",
         accent: "#3A3A3A",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
+        // Remove duplicate primary definition
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
